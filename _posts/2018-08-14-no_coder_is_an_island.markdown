@@ -1,7 +1,7 @@
 ---
 layout: post
 title:      "No Coder is an Island"
-date:       2018-08-14 22:05:29 +0000
+date:       2018-08-14 18:05:30 -0400
 permalink:  no_coder_is_an_island
 ---
 
@@ -18,23 +18,23 @@ Another added benefit of pair programming is being able to see another person's 
 
 I've included a clip of the resulting code below.
 
+> > ```
+> def valid_triangle?
+>   (@a+@b > @c) && (@b+@c > @a) && (@a+@c > @b) && @a>0 && @b>0 && @c>0
+> 	#This covers the various requirements that every triangle *must* have in order to be valid: each sides must be greater than 0 and the sum of any two sides must be greater than the third side.
+>   end
+> 
+>   def kind
+>     if self.valid_triangle? != true
+>       raise TriangleError
+> 			#The rest of the code covered the various configurations that would lead to a triangle being classified as an   Equilateral, Scalene, or Isoceles Triangle.
+> 		end
+> 	end
 > ```
-def valid_triangle?
-  (@a+@b > @c) && (@b+@c > @a) && (@a+@c > @b) && @a>0 && @b>0 && @c>0
-	#This covers the various requirements that every triangle *must* have in order to be valid: each sides must be greater than 0 and the sum of any two sides must be greater than the third side.
-  end
-
-  def kind
-    if self.valid_triangle? != true
-      raise TriangleError
-			#The rest of the code covered the various configurations that would lead to a triangle being classified as an   Equilateral, Scalene, or Isoceles Triangle.
-		end
-	end
-```
 
 In spite of my expectations, I've gotten a lot out of Pair Programming. But there are some times when no one is available or I'm just not in the mood to chat/interact with other people. Taking inspiration from Andrew Hunt and David Thomas's The Pragmatic Programmer, I've adoped my own version of Rubber Duck Debugging. I hopped on the cryptocurrency trend and purchased a Cryptokitty, a sort of online Beanie Baby that have different generations with the earliest generations going up in price. I find myself debugging with the Cryptokitty and confiding my progamming woes to it when I'm trying to work through a particularly challenging bit of code. 
 
-![](https://www.cryptokitties.co/kitty/854796)
+![(https://www.cryptokitties.co/kitty/854796)]
 
 
 
