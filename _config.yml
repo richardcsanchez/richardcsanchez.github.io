@@ -1,15 +1,14 @@
 # Site settings
-title: Kitty Codes
+author: Richard Sanchez
+title: Richard C Sanchez
 header-img: img/home-bg.png
 email: richard.charles.s@gmail.com
-copyright_name: kittycharles
+copyright_name: Richard Sanchez
 description: > # this means to ignore newlines until "baseurl:"
   Adventures in Coding
 baseurl: "" # the subpath of your site, e.g. /blog
 twitter_username: 
-github_username:  kittycharles
-learn_profile: kittycharles
-email_username: richard.charles.s@gmail.com
+github_username:  richardcsanchez
 
 # Build settings
 markdown: kramdown
