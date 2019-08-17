@@ -14,41 +14,52 @@ The first step I tackled here is to remove the white space in the string. My ini
  
  I was trying to avoid using regex and I was looking at some more unconventional "hacky" methods. I found that if I ```.split(" ")``` the string, then called ```.join("")```, I would get a string without whitespaces. I could then call ```.split("")``` again on that new string and get an array of individual letters.
 
-```var string = "this is a string"
+```
+var string = "this is a string"
 
 var newString = string.split(" ").join("")
 var letterArray = newString.split("")
 
 console.log(newString): "thisisastring"
-console.log(letterArray): ["t", "h", "i", "s", "i", "s", "a", "s", "t", "r", "i", "n", "g"]```
+console.log(letterArray): ["t", "h", "i", "s", "i", "s", "a", "s", "t", "r", "i", "n", "g"
+]```
 
 While this gave me the desired result, calling ```.split()``` on two different lines while manipulating the same string didn't look very elegant. So I went with the regex option, which gave me the result in one line of clean code.
 
-```var letterArray = string.replace(/\s+/g, '').split("")```
+```
+var letterArray = string.replace(/\s+/g, '').split("")
+```
 
 From there, I looped over the the `letterArray` with a `for...` loop, incrementing the count for each letter as it was iterated over, and created an object ,`result`, to store the incrementing counts. 
 
-```var letter = ""
+```
 var result = {}
 
 for (var i = 0; i < letterArray.length; i++) {
-  letter = letterArray[i]```
+  letter = letterArray[i]
+```
+
 	
 While iterating, if we have seen this letter, increase the count by one
 	
-    ```if (result[letter]) {
-    result[letter]++```
+    ```
+		if (result[letter]) {
+    result[letter]++
+		```
 			
 Otherwise set count to 1
 	
-   ``` } else {
+   ``` 
+	 } else {
      result[letter] = 1
     }
-}```
+}
+```
 
 The `result` object gives us pairs of letters and their individual counts: 
 
-`Object {
+```
+Object {
   a: 1,
   g: 1,
   h: 1,
@@ -57,5 +68,28 @@ The `result` object gives us pairs of letters and their individual counts:
   r: 1,
   s: 3,
   t: 2
-}`
+}
+```
+
+Full Code:
+```
+var string = "this is a string"
+
+var letterArray = string.replace(/\s+/g, '').split("")
+
+var letter = ""
+var result = {}
+
+for (var i = 0; i < letterArray.length; i++) {
+  letter = letterArray[i]
+  
+    if (result[letter]) {
+      result[letter]++
+    } else {
+      result[letter] = 1
+    }
+}
+
+console.log(result)
+```
 
