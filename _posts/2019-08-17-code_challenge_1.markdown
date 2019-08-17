@@ -42,18 +42,19 @@ for (var i = 0; i < letterArray.length; i++) {
 
 	
 While iterating, if we have seen this letter, increase the count by one
+
 	
-    ```
-		if (result[letter]) {
-    result[letter]++
-		```
+```
+if (result[letter]) {
+  result[letter]++	
+```
 			
 Otherwise set count to 1
 	
-   ``` 
-	 } else {
-     result[letter] = 1
-    }
+``` 
+} else {
+  result[letter] = 1
+ }
 }
 ```
 
