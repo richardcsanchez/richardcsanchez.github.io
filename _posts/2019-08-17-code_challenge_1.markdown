@@ -22,7 +22,8 @@ var letterArray = newString.split("")
 
 console.log(newString): "thisisastring"
 console.log(letterArray): ["t", "h", "i", "s", "i", "s", "a", "s", "t", "r", "i", "n", "g"
-]```
+]
+```
 
 While this gave me the desired result, calling ```.split()``` on two different lines while manipulating the same string didn't look very elegant. So I went with the regex option, which gave me the result in one line of clean code.
 
