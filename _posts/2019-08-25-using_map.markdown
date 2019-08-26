@@ -1,7 +1,7 @@
 ---
 layout: post
-title:      "Using `.map()`"
-date:       2019-08-26 02:04:30 +0000
+title:      "Using .map()"
+date:       2019-08-25 22:04:31 -0400
 permalink:  using_map
 ---
 
@@ -27,7 +27,7 @@ Given the same array as the example above, ` const array = ['dog', 'cat', 'snake
 
 ```const pluralize = (array) => {
 const pluralArray = []
-for (i = 0; i < array.length; i++) {
+for (var i = 0; i < array.length; i++) {
 const string = array[i]
 const plural = (string + "s")
  pluralArray.push(plural)
